@@ -1,0 +1,14 @@
+##############################################################
+## Video 01 - https://www.youtube.com/watch?v=5uX80VI0xLE&list=PLC3y8-rFHvwgeQIfSDtEGVvvSEPDkL_1f&index=2
+##############################################################
+
+Video 2 Summary - VUE:
+Commands to create a helloworld - vue project
+
+npm install -g @vue/cli
+vue create hello-world
+cd hello-world/
+npm run serve
+
+This will serve up our first hello-world project using Vue CLI at:
+http://localhost:8080/
