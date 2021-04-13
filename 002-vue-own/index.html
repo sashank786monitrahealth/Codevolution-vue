@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Test</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="counter">
+        {{fruit}}: {{counter}}
+    </div>
+
+    <script>
+      const Counter = {
+          data(){
+              return {
+                  counter:1,
+                  fruit:"Apple"
+              };
+          }
+      }
+
+    Vue.createApp(Counter).mount('#counter');
+
+    </script>
+</body>
+</html>
