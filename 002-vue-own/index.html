@@ -26,6 +26,11 @@
         <h2>{{myName}}</h2>
         <button id="changeMyName" v-on:click="myName='Batman'" v-on:mouseover="myName='Superman'">Change Name</button>
         
+        
+        <h2>{{myCount}}</h2>
+        <button id="increment" v-on:click="myCount++">Increment</button>
+        <button id="decrement" v-on:click="myCount--">Decrement</button>
+        
     </div>
 
     <script>
@@ -36,7 +41,8 @@
                   fruit:"Apple",
                   names:["Bruce","Clark","Diana"],
                   baseMultiplier:5,
-                  myName:"Sashank"
+                  myName:"Sashank",
+                  myCount:0
               };
           },
           methods:{
