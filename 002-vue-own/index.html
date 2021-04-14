@@ -24,12 +24,30 @@
         </ul>
         
         <h2>{{myName}}</h2>
-        <button id="changeMyName" v-on:click="changeMyName" v-on:mouseover="myName='Superman'">Change Name</button>
+        <button id="changeMyName" v-on:click="changeMyName('Batman', $event)" v-on:mouseover="changeMyName('Superman', $event)">Change Name</button>
         
         
         <h2>{{myCount}}</h2>
         <button id="increment" v-on:click="increment(5)">Increment 5</button>
         <button id="decrement" v-on:click="decrement(5)">Decrement 5</button>
+        
+        <br><br><br>
+        <div id="myForm">
+        <div>
+           <pre>
+           {{JSON.stringify(formValues, null, 2)}}
+           </pre>
+        </div>
+           <form>
+             <div>
+             
+                <label for="name">Name</label>
+                <input type="text" id="name" v-model="formValues.name">
+             </div>
+           </form>
+           
+        <div>
+        
         
     </div>
 
@@ -42,13 +60,16 @@
                   names:["Bruce","Clark","Diana"],
                   baseMultiplier:5,
                   myName:"Sashank",
-                  myCount:0
+                  myCount:0,
+                  formValues:{
+                    name:"",
+                  }
               };
           },
           methods:{
-            changeMyName(event){
+            changeMyName(iName, event){
                console.log(event);
-               this.myName = "Batman"
+               this.myName = iName
             },
             add(a,b,c){
                return a+b+c;
