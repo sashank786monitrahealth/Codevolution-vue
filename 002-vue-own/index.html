@@ -50,6 +50,27 @@
                <textarea id="profile" v-model="formValues.profileSummary"> </textarea>
              </div>
              
+             <div>
+             <label for="country">Country</label>
+             <select id="country" v-model="formValues.country">
+               <option value="">Select a Country</option>
+               <option value="india">India</option>
+               <option value="vietnam">Vietnam</option>
+               <option value="singapore">Singapore</option>
+             </select>
+             </div>
+             
+             
+             
+             <div>
+             <label for="job-location">Job Location</label>
+             <select id="job-location" multiple v-model="formValues.jobLocation">
+               <option value="india">India</option>
+               <option value="vietnam">Vietnam</option>
+               <option value="singapore">Singapore</option>
+             </select>
+             </div>
+             
            </form>
            
         </div>
