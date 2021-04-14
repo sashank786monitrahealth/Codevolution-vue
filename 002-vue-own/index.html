@@ -9,6 +9,18 @@
 <body>
     <div id="counter">
         {{fruit}}: {{counter}}
+        <template v-if="counter>0">
+        <h2 v-if="counter>0">Counter is positive</h2>
+        <h2 v-else-if="counter<0">Counter is negative</h2>
+        <h2 v-else>Counter is zero</h2>
+        </template>
+        
+        <h2>Output for Add method: {{add()}}</h2>
+        <ul>
+        <li v-for="(name,idx) in names" v-bind:key="name">
+            {{idx}} {{name}}
+        </li>
+        </ul>
     </div>
 
     <script>
@@ -16,8 +28,14 @@
           data(){
               return {
                   counter:1,
-                  fruit:"Apple"
+                  fruit:"Apple",
+                  names:["Bruce","Clark","Diana"]
               };
+          },
+          methods:{
+            add(){
+               return 2+3+5;
+            }
           }
       }
 
