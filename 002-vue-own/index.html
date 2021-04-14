@@ -16,6 +16,7 @@
         </template>
         
         <h2>Output for Add method: {{add(10,30,50)}}</h2>
+        <h2>Output for Multiply 10 times 5 is: {{multiply(10)}}</h2>
         <ul>
         <li v-for="(name,idx) in names" v-bind:key="name">
             {{idx}} {{name}}
@@ -29,12 +30,16 @@
               return {
                   counter:1,
                   fruit:"Apple",
-                  names:["Bruce","Clark","Diana"]
+                  names:["Bruce","Clark","Diana"],
+                  baseMultiplier:5,
               };
           },
           methods:{
             add(a,b,c){
                return a+b+c;
+            },
+            multiply(num){
+              return num*this.baseMultiplier
             }
           }
       }
